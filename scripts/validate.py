@@ -6,7 +6,6 @@
 """Used to test a BCO against the schema. The following commands were used to run the script:
 
     cd BCO_specification/
-    python -m venv env
     source env/bin/activate
     pip install jsonschema jsonref
     python validate.py HCV1a.json $PWD/schemas/biocomputeobject.json
@@ -24,13 +23,11 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('json', type=argparse.FileType('r'), help="json to validate")
-    parser.add_argument('-schema', type=argparse.FileType('r'), help="root json schema to validate against")
+    parser.add_argument('schema', type=argparse.FileType('r'), help="root json schema to validate against")
     args = parser.parse_args()
+    base_uri = 'file://{}/'.format(os.path.dirname(args.schema.name))
     data = json.load(args.json)
-    if args.schema is not None:
-        base_uri = 'file://{}/'.format(os.path.dirname(args.schema.name))
-        schema = jsonref.load(args.schema, base_uri=base_uri, jsonschema=True)
-    else: schema = jsonref.load_uri('https://opensource.ieee.org/2791-object/ieee-2791-schema/-/raw/master/2791object.json')
+    schema = jsonref.load(args.schema, base_uri=base_uri, jsonschema=True)
     return validate(data, schema)
 #______________________________________________________________________________#
 if __name__ == "__main__":
