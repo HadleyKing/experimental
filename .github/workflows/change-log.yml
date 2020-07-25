@@ -8,4 +8,4 @@ jobs:
       - name: locator
         run: pwd
       - name: run
-        run: './scripts/log.sh'
+        run: 'sh scripts/log.sh'
