@@ -7,7 +7,5 @@ jobs:
     steps:
       - name: locator
         run: pwd
-      - name: mayI
-        run: ls -l ./scripts
       - name: run
-        run: ./scripts/log.sh
+        run: sh ./scripts/log.sh
