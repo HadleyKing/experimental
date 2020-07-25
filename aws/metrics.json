@@ -1,0 +1,332 @@
+{
+  "1": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:10:56",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273856.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:03",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273863.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "7 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "7.0000000"
+    },
+    {
+      "file_size": 12,
+      "total_size": 12,
+      "uuid": "84884a5d-1f5e-4a17-986a-080014c97364",
+      "filename": "NC_045512.txt"
+    },
+    {
+      "file_size": 55,
+      "total_size": 55,
+      "uuid": "a598a656-91a7-47aa-b0f1-d1e614c97ba2",
+      "filename": "NCBI Accession Download on data 1: Log"
+    },
+    {
+      "file_size": 30429,
+      "total_size": 30429,
+      "uuid": "8ac5896a-8520-4b14-88d0-7c4f51639607",
+      "filename": "NC_045512.2"
+    }
+  ],
+  "2": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:11:08",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273868.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:13",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273873.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "5 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "5.0000000"
+    },
+    {
+      "file_size": 30429,
+      "total_size": 30429,
+      "uuid": "8ac5896a-8520-4b14-88d0-7c4f51639607",
+      "filename": "NC_045512.2"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "82e04dc5-f4f3-416e-8f9a-9426b541e6be",
+      "filename": "output_forward"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "4efe64e1-0153-4353-9dd7-e310f60ea62d",
+      "filename": "output_reverse"
+    }
+  ],
+  "3": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:11:15",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273875.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:21",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273881.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "6 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "6.0000000"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "82e04dc5-f4f3-416e-8f9a-9426b541e6be",
+      "filename": "output_forward"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "57f80874-a4a2-470c-9d1a-5d4f6bfa33ec",
+      "filename": "FASTQ Groomer on data 7"
+    }
+  ],
+  "4": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:11:16",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273876.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:22",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273882.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "6 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "6.0000000"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "4efe64e1-0153-4353-9dd7-e310f60ea62d",
+      "filename": "output_reverse"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "8d9be71f-23d7-44a4-8ab4-beeb0e2da4bd",
+      "filename": "FASTQ Groomer on data 8"
+    }
+  ],
+  "5": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:11:24",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273884.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:36",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273896.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "12 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "12.0000000"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "57f80874-a4a2-470c-9d1a-5d4f6bfa33ec",
+      "filename": "FASTQ Groomer on data 7"
+    },
+    {
+      "file_size": 563872,
+      "total_size": 2419255,
+      "uuid": "1d97ecfa-f18a-4981-9a2e-2d0d1b5e0733",
+      "filename": "FastQC on data 10: Webpage"
+    },
+    {
+      "file_size": 9345,
+      "total_size": 9345,
+      "uuid": "8e408d2b-f18d-4398-9403-ace240bff57d",
+      "filename": "FastQC on data 10: RawData"
+    }
+  ],
+  "6": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:11:26",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273886.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:33",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273893.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "7 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "7.0000000"
+    },
+    {
+      "file_size": 30429,
+      "total_size": 30429,
+      "uuid": "8ac5896a-8520-4b14-88d0-7c4f51639607",
+      "filename": "NC_045512.2"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "57f80874-a4a2-470c-9d1a-5d4f6bfa33ec",
+      "filename": "FASTQ Groomer on data 7"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "8d9be71f-23d7-44a4-8ab4-beeb0e2da4bd",
+      "filename": "FASTQ Groomer on data 8"
+    },
+    {
+      "file_size": 1403662,
+      "total_size": 1403662,
+      "uuid": "8a2cdf59-85e2-4e3b-b9ea-63a0167fd60d",
+      "filename": "Map with BWA-MEM on data 12, data 10, and data 4 (mapped reads in BAM format)"
+    }
+  ],
+  "7": [
+    {
+      "title": "Cores Allocated",
+      "value": "1",
+      "plugin": "core",
+      "name": "galaxy_slots",
+      "raw_value": "1.0000000"
+    },
+    {
+      "title": "Job Start Time",
+      "value": "2020-04-30 15:11:26",
+      "plugin": "core",
+      "name": "start_epoch",
+      "raw_value": "1588273886.0000000"
+    },
+    {
+      "title": "Job End Time",
+      "value": "2020-04-30 15:11:36",
+      "plugin": "core",
+      "name": "end_epoch",
+      "raw_value": "1588273896.0000000"
+    },
+    {
+      "title": "Job Runtime (Wall Clock)",
+      "value": "10 seconds",
+      "plugin": "core",
+      "name": "runtime_seconds",
+      "raw_value": "10.0000000"
+    },
+    {
+      "file_size": 3228199,
+      "total_size": 3228199,
+      "uuid": "8d9be71f-23d7-44a4-8ab4-beeb0e2da4bd",
+      "filename": "FASTQ Groomer on data 8"
+    },
+    {
+      "file_size": 559844,
+      "total_size": 2400718,
+      "uuid": "9b3042f1-40c6-4d66-a694-8552b0e9d165",
+      "filename": "FastQC on data 12: Webpage"
+    },
+    {
+      "file_size": 9330,
+      "total_size": 9330,
+      "uuid": "978cdaa5-e73d-4176-ad32-f80e0fe87cf1",
+      "filename": "FastQC on data 12: RawData"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://www.w3id.org/biocompute/1.3.0/schemas/data_extension.json",
+    "type": "object",
+    "title": "Data Extension",
+    "description": "",
+    "required": [
+        "data_objects",
+        "algorithmic_constraints"
+    ],
+    "properties": {
+        "data_objects": {
+            "type": "object",
+            "title": "Data Objects",
+            "description": "",
+            "required": [
+                "comment"
+            ],
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "field_names": {
+                    "type": "array",
+                    "title": "Field Names",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "field_name",
+                            "count",
+                            "description"
+                        ],
+                        "properties": {
+                            "field_name": {
+                                "type": "string"
+                            },
+                            "count": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "algorithmic_constraints": {
+            "type": "object",
+            "title": "Algorithmic Constraints",
+            "description": "",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                    "log_filename"
+                ],
+                "properties": {
+                    "comment": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "log_filename": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "exclusion_rules": {
+                        "type": "array",
+                        "title": "Exclusion Rules",
+                        "description": "",
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": [
+                                "unique_values",
+                                "constraint"
+                            ],
+                            "properties": {
+                                "unique_values": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "constraint": {
+                                    "description": "",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

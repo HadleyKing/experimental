@@ -1,0 +1,111 @@
+README ERROR DOMAIN
+
+Error Domain:
+  Empirical Error:
+   Comment: Unique value statistics for the dataset
+    Fieldname: glycosylation_type    Number: 2    
+    Description: Type of glycosylation [linkage type]
+    Fieldname: amino_acid    Number: 3    
+    Description: Three letter code abbreviation of the amino acid
+    Fieldname: glytoucan_ac    Number: 675    
+    Description: Unique accession assigned to the registered glycan structure in GlyTouCan database
+    Fieldname: unicarbkb_id    Number: 807    
+    Description: UnicarbKB data structure identifier
+    Fieldname: evidence    Number: 127    
+    Description: NCBI PubMed Id (PMID) as evidence for the entry
+    Fieldname: glycosylation_site    Number: 162    
+    Description: Site on the protein sequence where glycosylation is observed
+    Fieldname: uniprotkb_acc_canonical    Number: 58    
+    Description: Accession assigned to the protein isoform chosen to be the canonical sequence in UniProtKB database
+  Algorythmic Error:
+   Comment: Unique value statistics for the dataset
+    Number: 109    Constraint: An asparagine is reported for an O-linked glycan structure.
+    Number: 250    Constraint: A serine or threonine is reported for an N-linked glycan structure.
+    Number: 0    Constraint: If the glycosylation type (linkage type) is not retrieved from pipeline step 2.
+    Number: 109    Constraint: UnicarbKB structure id is not present in input file.
+    Number: 67    Constraint: Amino acid position does not match to the amino acid on the associated position on fasta sequence [UniProt Nov-2018 Release]
+    Number: 89    Constraint: The protein accession is not included in the GlyGen-Protein Master list (UniProt-Nov 2018)
+    Number: 65    Constraint: Single glycan has both 'N-linked/O-linked' associations.
+	
+	
+BCO ERROR DOMAIN
+{
+    "error_domain":{
+        "empirical_error":{
+            "comment": "Unique value statistics for the dataset",
+            "statistics":[
+                {
+                    "key": "uniprotkb_acc_canonical",
+                    "value":58,
+                    "description": "Accession assigned to the protein isoform chosen to be the canonical sequence in UniProtKB database"
+                },
+                {
+                    "key": "glycosylation_site",
+                    "value":162,
+                    "description": "Site on the protein sequence where glycosylation is observed"
+                },
+                {
+                    "key": "evidence",
+                    "value":127,
+                    "description": "NCBI PubMed Id (PMID) as evidence for the entry"
+                },
+                {
+                    "key": "unicarbkb_id",
+                    "value":807,
+                    "description": "UnicarbKB data structure identifier"
+                },
+                {
+                    "key": "glytoucan_ac",
+                    "value":675,
+                    "description": "Unique accession assigned to the registered glycan structure in GlyTouCan database"
+                },
+                {
+                    "key": "amino_acid",
+                    "value":3,
+                    "description": "Three letter code abbreviation of the amino acid"
+                },
+                {
+                    "key": "glycosylation_type",
+                    "value":2,
+                    "description": "Type of glycosylation [linkage type]"
+                }
+            ]
+        },
+	    "algorithmic_error": [
+	        {
+                "comment": "Unique value statistics for the dataset",
+				"log_filename": "SomeNameHere.txt", 
+	            "exclusion_rules": [
+		            {
+		                "unique_values": 65,
+		                "constraint":"Single glycan has both 'N-linked/O-linked' associations."
+		            },
+		            {
+		                "unique_values": 89,
+		                "constraint":"The protein accession is not included in the GlyGen-Protein Master list (UniProt-Nov 2018)"
+		            },
+		            {
+		                "unique_values": 67,
+		                "constraint":"Amino acid position does not match to the amino acid on the associated position on fasta sequence [UniProt Nov-2018 Release]"
+		            },
+		            {
+		                "unique_values": 109,
+		                "constraint": "UnicarbKB structure id is not present in input file."
+		            },
+		            {
+		                "unique_values": 0,
+		                "constraint": "If the glycosylation type (linkage type) is not retrieved from pipeline step 2."
+		            },
+		            {
+		                "unique_values": 250,
+		                "constraint": "A serine or threonine is reported for an N-linked glycan structure."
+		            },
+		            {
+		                "unique_values": 109,
+		                "constraint": "An asparagine is reported for an O-linked glycan structure."
+		            }
+		        ]
+			}
+	    ]
+    }
+}

@@ -1,0 +1,72 @@
+(u'Top Level\n  BCO ID: https://w3id.org/biocompute/examples/glycosylation-sites-UniCarbKB', '\n  Checksum: ', u'D231C92C660CD1DD818D412E10F86F07338BA730FBE6898EF8F7DF1B1ECBFD3C', '\n  Specification:', u'https://w3id.org/biocompute/spec/1.3.0', '\nProvenance Domain', '\n  Name:', u'glycosylation-sites-UniCarbKB', '\n  Version: ', u'1.0', '\n  Review: ', u"\n    approved: Rahi Navelkar, The George Washington University; [u'curatedBy']", '\n  Created: ', u'2018-07-09T11:34:02-5:00', '\n  Modified: ', u'2018-11-22T14:44:02-5:00', '\n  Embargo: ', 'Start:', 'na', 'End: ', 'na', '\n  Contributors: ', "\n    Matthew Campbell; Institute for Glycomics, Griffith University, Gold Coast, Queensland, Australia: [u'contributedBy']\n    Rahi Navelkar; The George Washington University: [u'curatedBy']\n    Brian Fochtman; The George Washington University: [u'createdBy']\n    Robel Kahsay; The George Washington University: [u'createdBy']", '\n  License: ', u'https://creativecommons.org/licenses/by/4.0/')
+
+    List of human [taxid:9606] proteins with information on glycosylation sites from UniCarbKB database [https://academic.oup.com/nar/article/42/D1/D215/1052197, https://doi.org/10.1093/nar/gkt1128]. The file also includes GlyTouCan accessions and UniCarbKB structure ids for associated glycan structures.
+scm_extension,    license
+protein, canonical, glycosylation, glycan
+    Taxonomy; taxonomy; 9606
+    Step 1: make-proteoform_glycosylation_sites_unicarbkb_glytoucan-csv-step2.py
+    Version:   Description: Python script for assigning glycosylation type (linkage type) 
+    Input List:  /unicarbkb_human_2018_10_31_02_22_23.clean.csv /human_glytoucan_140918_2018_10_31_02_17_32.txt 
+    Output List:  /human_glycosylation_types.csv /human_glycosylation_types.log
+    Step 2: make-proteoform_glycosylation_sites_unicarbkb_glytoucan-csv-step3.py
+    Version: NA  Description: Python scripts for mapping to canonical protein accession and process data fro quality checks. a. If the protein accession is not included in UniProt protein list [UniProt Nov-2017 Release]. b. If the amino acid position does not match to the amino acid on the associated position on fasta sequence [UniProt Nov-2017 Release]. c. If the id (UnicarbKB structure id) is not present in input file. d. If the glycosylation type (linkage type) is not retrieved through step 2. e. If a serine or threonine is reported for an N-linked glycan structure. f. If an asparagine is reported for an O-linked glycan structure. g. If the glycosylation type (linkage type) has both 'N-linked;O-linked' assignment through step 2. 
+    Input List:  /unicarbkb_human_2018_10_31_02_22_23.clean.csv /human_protein_all.fasta 
+    Output List:  /human_proteoform_glycosylation_sites_unicarbkb_glytoucan.csv /human_proteoform_glycosylation_sites_unicarbkb_glytoucan.log
+Execution Domain:
+  Scripts: https://github.com/glygener/glygen-backend-integration/blob/master/integration/make-proteoform_glycosylation_sites_unicarbkb_glytoucan-csv-step2.py, https://github.com/glygener/glygen-backend-integration/blob/master/integration/make-proteoform_glycosylation_sites_unicarbkb_glytoucan-csv-step3.py, 
+  Script Driver: manual
+  Software Prerequisites: 
+    Name: Python    Version: 2.7.13  
+    URI Object:
+      access_time	2017-01-24T09:40:17-0500	uri	https://www.python.org/downloads/release/python-2713/	sha1_checksum	17add4bf0ad0ec2f08e0cae6d205c700	  
+  External Data Endpoints:
+	Name	UniCarbKB	URL	http://www.unicarbkb.org/
+	Name	access glygen-backend-integration	URL	https://github.com/glygener/glygen-backend-integration
+  Environment Variables:
+
+
+Input/output Domain:
+  Input Subdomain:
+    Filename: unicarbkb_human_2018_10_31_02_22_23.clean.csv    Access Time: 2018-10-10T11:34:02-5:00  
+    URI: http://data.glygen.org/datasets/source/unicarbkb_human_2018_10_31_02_22_23.clean.csv
+    Filename: human_glytoucan_140918_2018_10_31_02_17_32.txt    Access Time: 2018-10-10T11:34:02-5:00  
+    URI: http://data.glygen.org/datasets/source/human_glytoucan_140918_2018_10_31_02_17_32.txt
+    Filename: human_protein_all.fasta    Access Time: 2018-10-10T11:34:02-5:00  
+    URI: http://data.glygen.org/GLYDS00053
+  Output Subdomain:
+    Filename: human_glycosylation_types.csv    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/datasets/source/human_glycosylation_types.csv
+    Filename: human_glycosylation_types.log    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/datasets/logs/human_glycosylation_types.log
+    Filename: human_proteoform_glycosylation_sites_unicarbkb_glytoucan.log    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/datasets/logs/human_proteoform_glycosylation_sites_unicarbkb_glytoucan.log
+    Filename: human_proteoform_glycosylation_sites_unicarbkb_glytoucan.csv    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/GLYDS00040
+
+Error Domain:
+  Empirical Error:
+   Comment: Unique value statistics for the dataset
+    glycosylation_type: 2    Description: Type of glycosylation [linkage type]
+	
+    Fieldname: amino_acid    Number: 3    
+    Description: Three letter code abbreviation of the amino acid
+    Fieldname: glytoucan_ac    Number: 675    
+    Description: Unique accession assigned to the registered glycan structure in GlyTouCan database
+    Fieldname: unicarbkb_id    Number: 807    
+    Description: UnicarbKB data structure identifier
+    Fieldname: evidence    Number: 127    
+    Description: NCBI PubMed Id (PMID) as evidence for the entry
+    Fieldname: glycosylation_site    Number: 162    
+    Description: Site on the protein sequence where glycosylation is observed
+    Fieldname: uniprotkb_acc_canonical    Number: 58    
+    Description: Accession assigned to the protein isoform chosen to be the canonical sequence in UniProtKB database
+  Algorythmic Error:
+   Comment: Unique value statistics for the dataset
+	Number: 109	Constraint: An asparagine is reported for an O-linked glycan structure.
+	Number: 250	Constraint: A serine or threonine is reported for an N-linked glycan structure.
+	Number: 0	Constraint: If the glycosylation type (linkage type) is not retrieved from pipeline step 2.
+	Number: 109	Constraint: UnicarbKB structure id is not present in input file.
+	Number: 67	Constraint: Amino acid position does not match to the amino acid on the associated position on fasta sequence [UniProt Nov-2018 Release]
+	Number: 89	Constraint: The protein accession is not included in the GlyGen-Protein Master list (UniProt-Nov 2018)
+	Number: 65	Constraint: Single glycan has both 'N-linked/O-linked' associations.
+

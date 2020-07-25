@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://github.com/biocompute-objects/BCO_Specification/tree/datasetBCO/extension_domain/additional_license.json",
+    "type": "object",
+    "required": [
+        "data_license",
+        "scripts_license"
+    ],
+    "properties": {
+        "data_license": {
+            "type": "string",
+            "description": "Creative Commons license or other license information (text) space. The default or recommended license can be Attribution 4.0 International as shown in example",
+            "examples": [
+                "https://spdx.org/licenses/CC-BY-4.0.html"
+            ]
+        },
+        "scripts_license": {
+            "type": "string",
+            "description": "Creative Commons license or other license information (text) space. The default or recommended license can be Attribution 4.0 International as shown in example",
+            "examples": [
+                "https://spdx.org/licenses/CC-BY-4.0.html"
+            ]
+        }
+    }
+}

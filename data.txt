@@ -1,0 +1,94 @@
+Top Level
+  BCO ID:  https://w3id.org/biocompute/1.3.0/examples/HCV1a.json 
+  Checksum:  06DACE70679F35BA87A3DD6FFFED4ED24A4F5B8C2571264C37E5F1B3ADE04A31 
+  Specification: https://w3id.org/biocompute/1.3.0/ 
+Provenance Domain 
+  Name: HCV1a ledipasvir resistance SNP detection 
+  Version:  2.9 
+  Review:  
+    approved: Charles Hadley King (https://orcid.org/0000-0003-1409-4549), George Washington University; [u'curatedBy']
+    approved: Eric Donaldson, FDA; [u'curatedBy'] 
+  Created:  2017-01-24T09:40:17-0500 
+  Modified:  2018-09-21T14:06:14-0400 
+  Embargo:  Start: 2000-09-26T14:43:43-0400 End:  2000-09-26T14:43:45-0400 
+  Contributors:  
+    Charles Hadley King (https://orcid.org/0000-0003-1409-4549); George Washington University: [u'createdBy', u'curatedBy']
+    Eric Donaldson; FDA: [u'authoredBy'] 
+  License:  https://spdx.org/licenses/CC-BY-4.0.html 
+Usability Domain:  
+    Identify baseline single nucleotide polymorphisms (SNPs)[SO:0000694], (insertions)[SO:0000667], and (deletions)[SO:0000045] that correlate with reduced (ledipasvir)[pubchem.compound:67505836] antiviral drug efficacy in (Hepatitis C virus subtype 1)[taxonomy:31646]
+    Identify treatment emergent amino acid (substitutions)[SO:1000002] that correlate with antiviral drug treatment failure
+    Determine whether the treatment emergent amino acid (substitutions)[SO:1000002] identified correlate with treatment failure involving other drugs against the same virus
+    GitHub CWL example: https://github.com/mr-c/hive-cwl-examples/blob/master/workflow/hive-viral-mutation-detection.cwl#L20 
+Extensions:  fhir_extension,    scm_extension 
+Description Domain  
+  Keywords: HCV1a, Ledipasvir, antiviral resistance, SNP, amino acid substitutions 
+  External References: (Name, Namespace, Ids) 
+    PubChem-compound; pubchem.compound; 67505836
+    PubMed; pubmed; 26508693
+    Sequence Ontology; so; SO:000002, SO:0000694, SO:0000667, SO:0000045
+    Taxonomy; taxonomy; 31646 
+  Platform:  HIVE 
+  Pipeline Steps:  
+    Step 1: HIVE-hexagon
+    Version: 1.3  Description: Alignment of reads to a set of references 
+    Input List:  http://example.com/dna.cgi?cmd=objFile&ids=514683 http://example.com/dna.cgi?cmd=objFile&ids=514682 
+    Output List:  http://example.com/data/514769/allCount-aligned.csv
+    Step 2: HIVE-heptagon
+    Version: 1.3  Description: variant calling 
+    Input List:  http://example.com/data/514769/dnaAccessionBased.csv 
+    Output List:  http://example.com/data/514801/SNPProfile.csv http://example.com/data/14769/allCount-aligned.csv 
+Execution Domain:
+  Scripts: https://github.com/glygener/glygen-backend-integration/blob/master/integration/make-proteoform_glycosylation_sites_unicarbkb_glytoucan-csv-step2.py, https://github.com/glygener/glygen-backend-integration/blob/master/integration/make-proteoform_glycosylation_sites_unicarbkb_glytoucan-csv-step3.py, 
+  Script Driver: manual
+  Software Prerequisites: 
+    Name: Python    Version: 2.7.13  
+    URI Object:
+      access_time	2017-01-24T09:40:17-0500	uri	https://www.python.org/downloads/release/python-2713/	sha1_checksum	17add4bf0ad0ec2f08e0cae6d205c700	  
+  External Data Endpoints:
+	Name	UniCarbKB	URL	http://www.unicarbkb.org/
+	Name	access glygen-backend-integration	URL	https://github.com/glygener/glygen-backend-integration
+  Environment Variables:
+Input/output Domain:
+  Input Subdomain:
+    Filename: unicarbkb_human_2018_10_31_02_22_23.clean.csv    Access Time: 2018-10-10T11:34:02-5:00  
+    URI: http://data.glygen.org/datasets/source/unicarbkb_human_2018_10_31_02_22_23.clean.csv
+    Filename: human_glytoucan_140918_2018_10_31_02_17_32.txt    Access Time: 2018-10-10T11:34:02-5:00  
+    URI: http://data.glygen.org/datasets/source/human_glytoucan_140918_2018_10_31_02_17_32.txt
+    Filename: human_protein_all.fasta    Access Time: 2018-10-10T11:34:02-5:00  
+    URI: http://data.glygen.org/GLYDS00053
+  Output Subdomain:
+    Filename: human_glycosylation_types.csv    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/datasets/source/human_glycosylation_types.csv
+    Filename: human_glycosylation_types.log    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/datasets/logs/human_glycosylation_types.log
+    Filename: human_proteoform_glycosylation_sites_unicarbkb_glytoucan.log    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/datasets/logs/human_proteoform_glycosylation_sites_unicarbkb_glytoucan.log
+    Filename: human_proteoform_glycosylation_sites_unicarbkb_glytoucan.csv    Media Type: csv/text    Access Time: 2018-10-10T11:37:02-5:00  
+    URI: http://data.glygen.org/GLYDS00040
+Error Domain:
+  Empirical Error:
+   Comment: Unique value statistics for the dataset
+    Fieldname: glycosylation_type    Number: 2    
+    Description: Type of glycosylation [linkage type]
+    Fieldname: amino_acid    Number: 3    
+    Description: Three letter code abbreviation of the amino acid
+    Fieldname: glytoucan_ac    Number: 675    
+    Description: Unique accession assigned to the registered glycan structure in GlyTouCan database
+    Fieldname: unicarbkb_id    Number: 807    
+    Description: UnicarbKB data structure identifier
+    Fieldname: evidence    Number: 127    
+    Description: NCBI PubMed Id (PMID) as evidence for the entry
+    Fieldname: glycosylation_site    Number: 162    
+    Description: Site on the protein sequence where glycosylation is observed
+    Fieldname: uniprotkb_acc_canonical    Number: 58    
+    Description: Accession assigned to the protein isoform chosen to be the canonical sequence in UniProtKB database
+  Algorythmic Error:
+   Comment: Unique value statistics for the dataset
+    Number: 109    Constraint: An asparagine is reported for an O-linked glycan structure.
+    Number: 250    Constraint: A serine or threonine is reported for an N-linked glycan structure.
+    Number: 0    Constraint: If the glycosylation type (linkage type) is not retrieved from pipeline step 2.
+    Number: 109    Constraint: UnicarbKB structure id is not present in input file.
+    Number: 67    Constraint: Amino acid position does not match to the amino acid on the associated position on fasta sequence [UniProt Nov-2018 Release]
+    Number: 89    Constraint: The protein accession is not included in the GlyGen-Protein Master list (UniProt-Nov 2018)
+    Number: 65    Constraint: Single glycan has both 'N-linked/O-linked' associations.
