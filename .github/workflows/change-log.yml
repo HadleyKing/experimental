@@ -5,5 +5,7 @@ jobs:
     name: changeLog
     runs-on: ubuntu-latest
     steps:
+      - name: locator
+        run: pwd
       - name: run
         run: './scripts/log.sh'
