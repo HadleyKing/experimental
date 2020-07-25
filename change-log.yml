@@ -1,9 +1,0 @@
-name: Change Log
-on: [push]
-jobs:
-  build:
-    name: changeLog
-    runs-on: ubuntu-latest
-    steps:
-      - name: run
-        run: /scripts/log.sh
