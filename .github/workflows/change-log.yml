@@ -5,6 +5,7 @@ jobs:
     name: changeLog
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: locator
         run: pwd
       - name: run
